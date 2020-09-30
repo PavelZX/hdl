@@ -79,6 +79,11 @@ ad_ip_parameter rom_sys_0 CONFIG.ROM_ADDR_BITS 9
 set sys_cstring "sys rom custom string placeholder"
 sysid_gen_sys_init_file $sys_cstring
 
+set_property -dict [list CONFIG.ENABLE_LINK_STATS {1}] [get_bd_cells axi_adrv9009_som_rx_jesd/rx_axi]
+set_property -dict [list CONFIG.ENABLE_LINK_STATS {1}] [get_bd_cells axi_adrv9009_som_obs_jesd/rx_axi]
+set_property -dict [list CONFIG.ENABLE_LINK_STATS {1}] [get_bd_cells axi_adrv9009_som_tx_jesd/tx_axi]
+
+
 ad_cpu_interconnect 0x46000000 axi_fmcomms8_gpio
 
 # interconnect (mem/dac)

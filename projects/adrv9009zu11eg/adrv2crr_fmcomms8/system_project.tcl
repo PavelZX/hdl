@@ -27,4 +27,5 @@ adi_project_files  fmcomms8_adrv9009zu11eg [list \
   "$ad_hdl_dir/library/xilinx/common/ad_iobuf.v" \
  ]
 
+set_property strategy Performance_ExploreWithRemap [get_runs impl_1]
 adi_project_run fmcomms8_adrv9009zu11eg
